@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\WebhookServer\Exceptions;
+namespace Directoryxx\WebhookServer\Exceptions;
 
 use Exception;
-use Spatie\WebhookServer\Signer\Signer;
+use Directoryxx\WebhookServer\Signer\Signer;
 
 class InvalidSigner extends Exception
 {

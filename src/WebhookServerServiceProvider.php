@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\WebhookServer;
+namespace Directoryxx\WebhookServer;
 
 use Illuminate\Support\ServiceProvider;
 

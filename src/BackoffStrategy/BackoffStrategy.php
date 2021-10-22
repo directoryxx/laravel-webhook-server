@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\WebhookServer\BackoffStrategy;
+namespace Directoryxx\WebhookServer\BackoffStrategy;
 
 interface BackoffStrategy
 {

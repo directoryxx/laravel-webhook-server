@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\WebhookServer;
+namespace Directoryxx\WebhookServer;
 
 use Exception;
 use GuzzleHttp\Client;
@@ -11,9 +11,9 @@ use Illuminate\Queue\InteractsWithQueue;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Spatie\WebhookServer\Events\WebhookCallFailedEvent;
-use Spatie\WebhookServer\Events\WebhookCallSucceededEvent;
-use Spatie\WebhookServer\Events\FinalWebhookCallFailedEvent;
+use Directoryxx\WebhookServer\Events\WebhookCallFailedEvent;
+use Directoryxx\WebhookServer\Events\WebhookCallSucceededEvent;
+use Directoryxx\WebhookServer\Events\FinalWebhookCallFailedEvent;
 
 class CallWebhookJob implements ShouldQueue
 {
@@ -94,7 +94,7 @@ class CallWebhookJob implements ShouldQueue
             }
 
             if (! $lastAttempt) {
-                /** @var \Spatie\WebhookServer\BackoffStrategy\BackoffStrategy $backoffStrategy */
+                /** @var \Directoryxx\WebhookServer\BackoffStrategy\BackoffStrategy $backoffStrategy */
                 $backoffStrategy = app($this->backoffStrategyClass);
 
                 $waitInSeconds = $backoffStrategy->waitInSecondsAfterAttempt($this->attempts());

@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\WebhookServer\Exceptions;
+namespace Directoryxx\WebhookServer\Exceptions;
 
 use Exception;
-use Spatie\WebhookServer\BackoffStrategy\BackoffStrategy;
+use Directoryxx\WebhookServer\BackoffStrategy\BackoffStrategy;
 
 class InvalidBackoffStrategy extends Exception
 {

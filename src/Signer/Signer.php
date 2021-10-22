@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\WebhookServer\Signer;
+namespace Directoryxx\WebhookServer\Signer;
 
 interface Signer
 {

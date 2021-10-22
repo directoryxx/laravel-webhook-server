@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\WebhookServer\Events;
+namespace Directoryxx\WebhookServer\Events;
 
 use GuzzleHttp\Psr7\Response;
 

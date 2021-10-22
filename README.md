@@ -22,7 +22,7 @@ composer require spatie/laravel-webhook-server
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Spatie\WebhookServer\WebhookServerServiceProvider"
+php artisan vendor:publish --provider="Directoryxx\WebhookServer\WebhookServerServiceProvider"
 ```
 
 This is the contents of the file that will be published at `config/webhook-server.php`:
@@ -45,7 +45,7 @@ return [
      * the headers of the webhook request. A webhook client can use the signature
      * to verify the request hasn't been tampered with.
      */
-    'signer' => \Spatie\WebhookServer\Signer\DefaultSigner::class,
+    'signer' => \Directoryxx\WebhookServer\Signer\DefaultSigner::class,
 
     /*
      * This is the name of the header where the signature will be added.
@@ -71,7 +71,7 @@ return [
     /*
      * This class determines how many seconds there should be between attempts.
      */
-    'backoff_strategy' => \Spatie\WebhookServer\BackoffStrategy\ExponentialBackoffStrategy::class,
+    'backoff_strategy' => \Directoryxx\WebhookServer\BackoffStrategy\ExponentialBackoffStrategy::class,
 
     /*
      * By default we will verify that the ssl certificate of the destination
@@ -116,12 +116,12 @@ $signature = hash_hmac('sha256', $payloadJson, $secret);
 
 ### Customizing signing requests
 
-If you want to customize the signing process, you can create your own custom signer. A signer is any class that implements `Spatie\WebhookServer\Signer`.
+If you want to customize the signing process, you can create your own custom signer. A signer is any class that implements `Directoryxx\WebhookServer\Signer`.
 
 This is what that interface looks like.
 
 ```php
-namespace Spatie\WebhookServer\Signer;
+namespace Directoryxx\WebhookServer\Signer;
 
 interface Signer
 {
@@ -168,10 +168,10 @@ WebhookCall::create()
 
 To not hammer the remote app we'll wait some time between each attempt. By default, we wait 10 seconds between the first and second attempt, 100 seconds between the third and the fourth, 1000 between the fourth and the fifth and so on. The maximum amount of seconds that we'll wait is 100 000, which is about 27 hours. This behavior is implemented in the default `ExponentialBackoffStrategy`.
 
-You can define your own backoff strategy by creating a class that implements `Spatie\WebhookServer\BackoffStrategy\BackoffStrategy`. This is what that interface looks like:
+You can define your own backoff strategy by creating a class that implements `Directoryxx\WebhookServer\BackoffStrategy\BackoffStrategy`. This is what that interface looks like:
 
 ```php
-namespace Spatie\WebhookServer\BackoffStrategy;
+namespace Directoryxx\WebhookServer\BackoffStrategy;
 
 interface BackoffStrategy
 {

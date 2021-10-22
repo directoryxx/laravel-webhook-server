@@ -1,22 +1,22 @@
 <?php
 
-namespace Spatie\WebhookServer;
+namespace Directoryxx\WebhookServer;
 
-use Spatie\WebhookServer\Signer\Signer;
-use Spatie\WebhookServer\Exceptions\InvalidSigner;
-use Spatie\WebhookServer\Exceptions\CouldNotCallWebhook;
-use Spatie\WebhookServer\BackoffStrategy\BackoffStrategy;
-use Spatie\WebhookServer\Exceptions\InvalidBackoffStrategy;
+use Directoryxx\WebhookServer\Signer\Signer;
+use Directoryxx\WebhookServer\Exceptions\InvalidSigner;
+use Directoryxx\WebhookServer\Exceptions\CouldNotCallWebhook;
+use Directoryxx\WebhookServer\BackoffStrategy\BackoffStrategy;
+use Directoryxx\WebhookServer\Exceptions\InvalidBackoffStrategy;
 
 class WebhookCall
 {
-    /** @var \Spatie\WebhookServer\CallWebhookJob */
+    /** @var \Directoryxx\WebhookServer\CallWebhookJob */
     protected $callWebhookJob;
 
     /** @var string */
     protected $secret;
 
-    /** @var \Spatie\WebhookServer\Signer\Signer */
+    /** @var \Directoryxx\WebhookServer\Signer\Signer */
     protected $signer;
 
     /** @var array */

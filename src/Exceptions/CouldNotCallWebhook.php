@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\WebhookServer\Exceptions;
+namespace Directoryxx\WebhookServer\Exceptions;
 
 use Exception;
 

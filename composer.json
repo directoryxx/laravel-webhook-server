@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-webhook-server",
+    "name": "directoryxx/laravel-webhook-server",
     "description": "Send webhooks in Laravel apps",
     "keywords": [
         "spatie",
@@ -7,7 +7,7 @@
         "webhook",
         "server"
     ],
-    "homepage": "https://github.com/spatie/laravel-webhook-server",
+    "homepage": "https://github.com/directoryxx/laravel-webhook-server",
     "license": "MIT",
     "authors": [
         {
@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\WebhookServer\\": "src"
+            "Directoryxx\\WebhookServer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\WebhookServer\\Tests\\": "tests"
+            "Directoryxx\\WebhookServer\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,7 +51,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\WebhookServer\\WebhookServerServiceProvider"
+                "Directoryxx\\WebhookServer\\WebhookServerServiceProvider"
             ]
         }
     }
